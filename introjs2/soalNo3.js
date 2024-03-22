@@ -23,36 +23,31 @@ Output:
 */
 
 function SeleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
-    // Validasi nilaiAwal < nilaiAkhir
     if (nilaiAwal >= nilaiAkhir) {
-        console.log("Nilai akhir harus lebih besar dari nilai awal");
-        return;
+        return "Nilai akhir harus lebih besar dari nilai awal";
     }
 
-    // Validasi jumlah data dalam dataArray harus lebih dari 5
     if (dataArray.length <= 5) {
-        console.log("Jumlah angka dalam dataArray harus lebih dari 5");
-        return;
+        return "Jumlah angka dalam dataArray harus lebih dari 5";
     }
 
-    // Mencari data dalam dataArray yang berada di antara nilaiAwal dan nilaiAkhir
-    const hasilSeleksi = dataArray.filter(data => data > nilaiAwal && data < nilaiAkhir);
+    let hasilSeleksi = [];
 
-    // Jika hasilSeleksi kosong, berikan pesan bahwa nilai tidak ditemukan
+    for (let i = 0; i < dataArray.length; i++) {
+        if (dataArray[i] > nilaiAwal && dataArray[i] < nilaiAkhir) {
+            hasilSeleksi.push(dataArray[i]);
+        }
+    }
+
     if (hasilSeleksi.length === 0) {
-        console.log("Nilai tidak ditemukan");
-        return;
+        return "Nilai tidak ditemukan";
     }
 
-    // Mengurutkan hasil seleksi
     hasilSeleksi.sort((a, b) => a - b);
-
-    // Menampilkan hasil seleksi
-    console.log(hasilSeleksi);
+    return hasilSeleksi;
 }
 
-// Contoh penggunaan:
-console.log(SeleksiNilai(2, 7, [3, 35, 6, 13, 14, 20, 10])); // Output: [3, 6]
-console.log(SeleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8])); // Output: "Nilai akhir harus lebih besar dari nilai awal"
-console.log(SeleksiNilai(5, 17, [2, 25, 4])); // Output: "Jumlah angka dalam dataArray harus lebih dari 5"
-console.log(SeleksiNilai(5, 17, [2, 25, 4, 1, 30, 18])); // Output: "Nilai tidak ditemukan"
+
+console.log(SeleksiNilai(2, 7, [3, 35, 6, 13, 14, 20, 10])); 
+
+
