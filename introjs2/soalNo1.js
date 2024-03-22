@@ -71,7 +71,7 @@ console.log(slice);
 console.log(`
 9. Splice`);
 const fruitsSplice = ['apple', 'banana', 'cherry']
-fruitsSplice.splice(0, 1, 'mango') 
+fruitsSplice.splice(0 , 2 , 'mango') 
 // menghapus 1 item di index 0 dan menambah 'mango' di index 0
 console.log(fruitsSplice) // ['mango', 'banana', 'cherry']
 

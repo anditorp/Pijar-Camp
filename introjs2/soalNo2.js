@@ -26,7 +26,7 @@ const names = [
 ];
 
 function searchName(keyword, limit, callback) {
-    const filteredNames = names.filter(name => name.toLowerCase().includes(keyword.toLowerCase())).slice(0, limit);
+    const filteredNames = names.filter(names => names.toLowerCase().includes(keyword.toLowerCase())).slice(0, limit);
     callback(filteredNames);
 }
 
@@ -35,4 +35,4 @@ function displayNames(filteredNames) {
 }
 
 // Contoh penggunaan
-searchName("an", 3, displayNames);
+searchName("an", 4 , displayNames);

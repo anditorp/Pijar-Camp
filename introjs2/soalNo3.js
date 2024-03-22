@@ -52,7 +52,7 @@ function SeleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
 }
 
 // Contoh penggunaan:
-SeleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]); // Output: [8, 14, 17]
-SeleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]); // Output: "Nilai akhir harus lebih besar dari nilai awal"
-SeleksiNilai(5, 17, [2, 25, 4]); // Output: "Jumlah angka dalam dataArray harus lebih dari 5"
-SeleksiNilai(5, 17, [2, 25, 4, 1, 30, 18]); // Output: "Nilai tidak ditemukan"
+console.log(SeleksiNilai(2, 7, [3, 35, 6, 13, 14, 20, 10])); // Output: [3, 6]
+console.log(SeleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8])); // Output: "Nilai akhir harus lebih besar dari nilai awal"
+console.log(SeleksiNilai(5, 17, [2, 25, 4])); // Output: "Jumlah angka dalam dataArray harus lebih dari 5"
+console.log(SeleksiNilai(5, 17, [2, 25, 4, 1, 30, 18])); // Output: "Nilai tidak ditemukan"
