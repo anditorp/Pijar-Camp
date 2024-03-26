@@ -21,8 +21,8 @@ const displayMonths = (error, months) => {
     if (error) {
         console.log(error.message);
     } else {
-        const monthOfTheYear = months.map(month => month);
-        console.log(monthOfTheYear);
+        const monthAbbreviations = months.map((month, index) => `${month.substr(0, 3)}. (${index + 1})`);
+        console.log(monthAbbreviations);
     }
 }
 
